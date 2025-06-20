@@ -72,7 +72,7 @@ nav {
     text-align: center;
 }
 #navigation-bar {
-    background: #954C2E !important;
+    background: #EFE4D2 !important;
 }
 .nav-links {
     display: inline-block;
@@ -88,7 +88,7 @@ li {
 }
 a{
     text-decoration: none;
-    color: #EFE4D2;
+    color: #131D4F;
     padding: 5%;
     padding-left: .5em;
 }
