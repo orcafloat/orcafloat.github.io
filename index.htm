@@ -23,83 +23,117 @@
         </style>
 </head>
 <body>
-    <header id="about">
-        <div class="container header-container"><span class="material-symbols-outlined" style="font-size: 124pt;">
-            stacks
-            </span>
-            <h1 class="company">&nbsp;&nbsp;Innovative IT</h1>
-            <nav>
-                <ul class="nav-links">
+    <header id="banner">
+        <div class="container header-container">
+            <div class="company-header" id="banner-inner">
+                <h1 class="company">Innovative IT</h1>
+                <img
+                  class="fit-picture"
+                  src="/assets/innovativelogo.png"
+                  alt="Innovative IT logo - Full Stack Aries" />
+            </div>
+            <div id="navigation-bar">
+            <nav id="nav">
+                <ul>
                     <li class="nav-links"><a href="#about">Who We Are</a></li>
                     <li class="nav-links"><a href="#services">What We Do</a></li>
                     <li class="nav-links"><a href="#contact">Contact Us</a></li>
                 </ul>
             </nav>
+            </div>
         </div>
     </header>
 
     <main>
-        <section id="services">
+        <section id="about">
             <div class="container">
                 <h2>About Us</h2>
-                <p> Our expert team of tech enthusiasts can help you elevate your small business in an ever-changing digital world. Accomplish more with us through thoughtful design, careful implementation and ongoing maintenance of business technology. Based in Ann Arbor, MI, we are a small business dedicated to helping other small businesses thrive. We understand the unique challenges you face and are committed to providing personalized solutions that fit your needs. Future-proof your organization with Innovative IT.</p>
+                <p><br/> Our expert team of tech enthusiasts can help you elevate your small business in an ever-changing digital world. Accomplish more with us through thoughtful design, careful implementation and ongoing maintenance of business technology. Based in Ann Arbor, MI, we are a small business dedicated to helping other small businesses thrive. We understand the unique challenges you face and are committed to providing personalized solutions that fit your needs. Future-proof your organization with Innovative IT.</p>
                 </p>
             </div>
         </section>
 
-        <section>
+        <section id="services">
             <div class="container">
-                <h2>Our Services</h2>
-                <ul>
+                <h2>Our Services</h2><br/>
+                <ul id="services-list">
                     <li><span class="material-symbols-outlined">
                         tactic
-                        </span> IT Strategy</li>
+                        </span><div id="service">&#9;IT Strategy</div></li>
                     <li><span class="material-symbols-outlined">
                         extension
-                        </span>Systems Integration</li>
+                        </span><div id="service">&#9;Systems Integration</div></li>
                     <li><span class="material-symbols-outlined">
                         security
-                        </span>Cyber Security</li>
+                        </span><div id="service">&#9;Cyber Security</div></li>
                     <li><span class="material-symbols-outlined">
                         code
-                        </span>Software Development</li>
+                        </span><div id="service">&#9;Software Development</div></li>
                     <li><span class="material-symbols-outlined">
                         support_agent
-                        </span>Support and Maintenance</li>
+                        </span><div id="service">&#9;Support and Maintenance</div></li>
                     <li><span class="material-symbols-outlined">
                         database
-                        </span>Information Management</li>
-                </ul>
+                        </span><div id="service">&#9;Information Management</div></li>
+                </ul><br/>
             </div>
         </section>
 
         <section id="contact">
             <div class="container">
-                <h2>Contact Us</h2>
-                <p>Are you ready to take the first step to greatness? <br/>We're with you.</p>
+                <h2>Contact Us</h2><br/>
+                <p>Ready to transform your business? We are here to help!</p><br/>
                 <form action="submit-form.php" method="post">
-                    <div class="box box-1">
-                        <label for="name">Name:&#9;</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="box box-2">
-                        <label for="email"> Email:&#9;&#9; </label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="box box-3">
-                        <label for="message">Message:&#9;</label>
-                        <textarea id="message" name="message" rows="10" required></textarea>
-                    </div>
-                    
+                    <table>
+                        <row>
+                            <div class="box box-1">
+                                <label for="name">Name:&#9;&#9;&#9;</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                        </row>
+                        <row>
+                            <div class="box box-2">
+                                <label for="email"> Email:&#9;&#9; </label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </row>
+                        <row>
+                            <div class="box box-3" id="message-box">
+                                <label id="message-label" for="message">Message:&#9;</label>
+                                <textarea id="message" name="message" rows="10" required></textarea>
+                            </div>
+                        </row>
+                    </table>
                     <button type="submit">Send Message</button>
                 </form>
             </div>
-        </section>
+    </section>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Back to top</button>
     </main>
+    <script> // Get the button:
+        let mybutton = document.getElementById("myBtn");
 
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0; // For Safari
+          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+    
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Innovative IT Consulting Services, Ann Arbor, MI<br /> All rights reserved.</p>
+        <div id="footer" class="container">
+            <p id="copyright">&copy; 2025 Innovative IT Consulting Services, Ann Arbor, MI<br /> All rights reserved.</p>
         </div>
     </footer>
 </body>
